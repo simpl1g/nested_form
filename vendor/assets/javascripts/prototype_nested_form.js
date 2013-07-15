@@ -4,7 +4,7 @@ document.observe('click', function(e, el) {
     var assoc     = el.readAttribute('data-association');      // Name of child
     var target    = el.readAttribute('data-target');
     var blueprint = $(el.readAttribute('data-blueprint-id'));
-    var content   = blueprint.readAttribute('data-blueprint'); // Fields template
+    var content   = blueprint.innerHTML; // Fields template
 
     // Make the context correct by replacing <parents> with the generated ID
     // of each of the parent objects
